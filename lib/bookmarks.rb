@@ -1,12 +1,13 @@
+require "pg"
+
 class BookmarksStorage
 
-  attr_reader :bookmarks
-
   def initialize
-  @bookmarks = [
-    "http://www.makersacademy.com",
-    "http://www.destroyallsoftware.com",
-    "http://www.google.com"
-   ]
+    @bookmarks = nil
+  end
+
+  def all
+    con = PG.connect(:dbname => 'bookmark_manager', :user => "mikey")
+    return con.exec("SELECT url FROM bookmarks")
   end
 end
