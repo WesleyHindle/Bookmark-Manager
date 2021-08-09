@@ -15,6 +15,7 @@ GEM
     diff-lcs (1.4.4)
     jaro_winkler (1.5.4)
     mini_mime (1.1.0)
+    multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.12.2-x86_64-darwin)
@@ -58,6 +59,12 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sinatra-contrib (2.1.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.1.0)
+      sinatra (= 2.1.0)
+      tilt (~> 2.0)
     tilt (2.0.10)
     unicode-display_width (1.6.1)
     xpath (3.2.0)
@@ -72,6 +79,7 @@ DEPENDENCIES
   rspec
   rubocop (= 0.79.0)
   sinatra
+  sinatra-contrib
 
 BUNDLED WITH
    2.2.3
