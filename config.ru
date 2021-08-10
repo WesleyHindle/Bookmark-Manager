@@ -1,3 +1,3 @@
-require_relatice "./app.rb"
+require_relative "./app.rb"
 
 run Bookmarks
