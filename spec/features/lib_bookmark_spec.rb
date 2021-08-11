@@ -16,4 +16,12 @@ describe BookmarksStorage do
       expect(bookmarks).to include("http://www.google.com")
     end
   end
+
+  
+  describe "#create" do 
+    it "should allow the creation of a new bookmark" do 
+      BookmarksStorage.create(url: 'http://example.org')
+      expect(BookmarksStorage.all).to include 'http://example.org'
+    end 
+  end
 end
